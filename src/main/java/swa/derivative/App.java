@@ -17,11 +17,11 @@ public class App extends Application {
 
     private final static double WIDTH = 640;
     private final static double HEIGHT = 640;
-    private final static double SCALE = 0.01;
+    private final static double SCALE = 0.2;
 
-    private final static double WIDTH_SCALE = 1;
+    private final static double WIDTH_SCALE = 0.2;
     private final static double HEIGHT_SCALE = 1;
-    private final static String X_AXIS_NAME = "h";
+    private final static String X_AXIS_NAME = "x";
     private final static String Y_AXIS_NAME = "E(h)";
 
 
@@ -39,19 +39,22 @@ public class App extends Application {
 
         drawCells();
 
-        double deltaX = 0.1;
+        double deltaX = 0.001;
 
         //drawFunction(cuf,"red");
 
-        //drawFunction(cuf.getDerivative(),"red");
-        //drawFunction(ds.getRightDifferential(cuf,deltaX),"green");
-        //drawFunction(ds.getLeftDifferential(cuf,deltaX),"blue");
-        //drawFunction(ds.getCentralDifferential(cuf,deltaX),"black");
+        /*
+        drawFunction(cuf.getDerivative(),"red");
+        drawFunction(ds.getRightDifferential(cuf,deltaX),"green");
+        drawFunction(ds.getLeftDifferential(cuf,deltaX),"blue");
+        drawFunction(ds.getCentralDifferential(cuf,deltaX),"black");
+        */
 
-
+        /*
         drawFunction(fc.getConvergenceRight(cuf,cuf.getDerivative(), 2), "red");
         drawFunction(fc.getConvergenceLeft(cuf,cuf.getDerivative(), 2 ), "blue");
         drawFunction(fc.getConvergenceCentral(cuf,cuf.getDerivative(), 2 ), "green");
+        */
 
         //drawFunction(cof, "red");
 
@@ -61,21 +64,28 @@ public class App extends Application {
         drawFunction(ds.getLeftDifferential(cof,deltaX),"blue");
         drawFunction(ds.getCentralDifferential(cof,deltaX),"black");
         */
-        //drawFunction(fc.getConvergenceRight(cof,cof.getDerivative(), 2 ), "red");
-        //drawFunction(fc.getConvergenceLeft(cof,cof.getDerivative(), 2 ), "blue");
-        //drawFunction(fc.getConvergenceCentral(cof,cof.getDerivative(), 2), "green");
 
+        /*
+        drawFunction(fc.getConvergenceRight(cof,cof.getDerivative()), "red");
+        drawFunction(fc.getConvergenceLeft(cof,cof.getDerivative()), "blue");
+        drawFunction(fc.getConvergenceCentral(cof,cof.getDerivative()), "green");
+        */
 
 
         //drawFunction(sif, "red");
 
-
         //drawFunction(sif.getDerivative(), "red");
-        //drawFunction(ds.getRightDifferential(sif,deltaX),"green");
-        //drawFunction(fc.compareFunctions(sif.getDerivative(), ds.getRightDifferential(sif,deltaX)), "blue");
+        //drawFunction(ds.getRightDifferential(sif,deltaX),"blue");
+        //drawFunction(ds.getLeftDifferential(sif,deltaX),"green");
+        //drawFunction(ds.getCentralDifferential(sif,deltaX),"black");
 
 
 
+        /*
+        drawFunction(fc.getConvergenceRight(sif,sif.getDerivative()), "red");
+        drawFunction(fc.getConvergenceLeft(sif,sif.getDerivative()), "blue");
+        drawFunction(fc.getConvergenceCentral(sif,sif.getDerivative()), "green");
+        */
         //drawFunction(ds.getLeftDifferential(sif,deltaX),"blue");
         //drawFunction(ds.getCentralDifferential(sif,deltaX),"black");
 
